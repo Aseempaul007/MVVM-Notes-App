@@ -24,14 +24,6 @@ public class Notes implements Serializable {
     @ColumnInfo(name = "pinned")
     private boolean pinned = false;
 
-    public Notes(int ID, String title, String description, String date, boolean pinned) {
-        this.ID = ID;
-        this.title = title;
-        this.description = description;
-        this.date = date;
-        this.pinned = pinned;
-    }
-
     public int getID() {
         return ID;
     }
