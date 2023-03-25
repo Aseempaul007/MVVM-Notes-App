@@ -23,10 +23,10 @@ public interface MainDao {
     List<Notes> getAll();
 
     @Query("UPDATE notes SET title = :title, description = :description WHERE ID= :ID")
-    public void update(int ID, String title, String description);
+    void update(int ID, String title, String description);
 
     @Delete
-    public void delete(Notes notes);
+    void delete(Notes notes);
 
     
 }
