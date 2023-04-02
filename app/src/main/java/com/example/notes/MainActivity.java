@@ -157,8 +157,16 @@ import java.util.List;
                      notesList.addAll(database.mainDao().getAll());
                      notesListAdapter.notifyDataSetChanged();
                      return true;
+
+                     case R.id.delete: database.mainDao().delete(selectedNote);
+                     notesList.remove(selectedNote);
+                     notesListAdapter.notifyDataSetChanged();
+                     return true;
+
+                     default: return false;
+
                  }
-                 return false;
+
              }
          });
          popupMenu.inflate(R.menu.popup_menu);
