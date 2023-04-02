@@ -58,7 +58,9 @@ public class NotesViewHolder extends RecyclerView.Adapter<NotesViewHolder.NotesV
             holder.imageView_pin.setImageResource(0);
         }
 
-        holder.notes_container.setCardBackgroundColor(holder.itemView.getResources().getColor(getRandomColor(),null));
+        holder.notes_container.setCardBackgroundColor(
+                holder.itemView.getResources().getColor(getRandomColor(),null)
+        );
         holder.notes_container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,13 +88,21 @@ public class NotesViewHolder extends RecyclerView.Adapter<NotesViewHolder.NotesV
         colorCode.add(R.color.Color5);
 
         int color_code = random.nextInt(colorCode.size());
-        return color_code;
+        return colorCode.get(color_code);
     }
 
     @Override
     public int getItemCount() {
         return list.size();
     }
+
+
+    public void filterList(List<Notes> filteredList){
+        list = filteredList;
+        notifyDataSetChanged();
+    }
+
+
 
     public class NotesViewHoler extends RecyclerView.ViewHolder{
 

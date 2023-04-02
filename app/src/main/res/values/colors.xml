@@ -11,8 +11,10 @@
 
 
     <color name="Color1">#31AEE4</color>
-    <color name="Color2">#FFEB3B</color>
+    <color name="Color2">#8BC34A</color>
     <color name="Color3">#4CAF50</color>
     <color name="Color4">#03A6A6</color>
     <color name="Color5">#9C53BC</color>
+
+    <color name="Color_fab">#FFEC44</color>
 </resources>
