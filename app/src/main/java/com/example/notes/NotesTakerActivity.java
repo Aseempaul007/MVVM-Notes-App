@@ -6,12 +6,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.notes.Database.RoomDB;
 import com.example.notes.Models.Notes;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,11 +21,13 @@ import java.util.Date;
 public class NotesTakerActivity extends AppCompatActivity {
 
     EditText editText_notes,editText_title;
-    ImageView imageView_save;
+    ExtendedFloatingActionButton imageView_save;
 
     Notes note;
 
     boolean isOldNote = false;
+
+    ExtendedFloatingActionButton discardButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class NotesTakerActivity extends AppCompatActivity {
         editText_notes = findViewById(R.id.editText_notes);
         editText_title = findViewById(R.id.editText_title);
         imageView_save = findViewById(R.id.imageView_save);
+        discardButton = findViewById(R.id.imageView_cancel);
 
 
         note = new Notes();
@@ -79,6 +84,15 @@ public class NotesTakerActivity extends AppCompatActivity {
                 Intent i = new Intent();
                 i.putExtra("note",note);
                 setResult(Activity.RESULT_OK,i);
+                finish();
+            }
+        });
+
+        discardButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(NotesTakerActivity.this,MainActivity.class);
+                startActivity(i);
                 finish();
             }
         });

@@ -10,11 +10,11 @@
     <color name="grey">#B0242B2E</color>
 
 
-    <color name="Color1">#31AEE4</color>
-    <color name="Color2">#8BC34A</color>
-    <color name="Color3">#4CAF50</color>
-    <color name="Color4">#03A6A6</color>
-    <color name="Color5">#9C53BC</color>
+    <color name="Color1">#A0E2FF</color>
+    <color name="Color2">#B9E686</color>
+    <color name="Color3">#85E189</color>
+    <color name="Color4">#71E6E6</color>
+    <color name="Color5">#D49FEC</color>
 
-    <color name="Color_fab">#FFEC44</color>
+    <color name="Color_fab">#FFE710</color>
 </resources>
