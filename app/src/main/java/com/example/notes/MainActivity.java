@@ -147,10 +147,8 @@ import java.util.List;
                  switch (menuItem.getItemId()){
                      case R.id.pin: if(selectedNote.isPinned()){
                          database.mainDao().setPin(selectedNote.getID(),false);
-                         Toast.makeText(MainActivity.this, "Unpinned", Toast.LENGTH_SHORT).show();
                      }else{
                          database.mainDao().setPin(selectedNote.getID(),true);
-                         Toast.makeText(MainActivity.this, "Pinned", Toast.LENGTH_SHORT).show();
                      }
 
                      notesList.clear();
