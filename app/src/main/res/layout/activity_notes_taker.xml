@@ -14,30 +14,30 @@
         android:layout_width="wrap_content"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginEnd="28dp"
+        android:layout_marginTop="22dp"
         android:backgroundTint="@color/Color_fab"
         android:padding="10dp"
         android:text="Save"
-        android:textSize="18sp"
         android:textAllCaps="false"
+        android:textSize="18sp"
         app:icon="@drawable/ic_check_circle_outline_24"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_notes" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/imageView_cancel"
         android:layout_width="wrap_content"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginStart="28dp"
+        android:layout_marginTop="22dp"
         android:backgroundTint="@color/Color_fab"
         android:padding="10dp"
         android:text="Discard"
-        android:textSize="18sp"
         android:textAllCaps="false"
+        android:textSize="18sp"
         app:icon="@drawable/ic_clear"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_notes" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <EditText
@@ -46,18 +46,18 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="50dp"
-        android:hint="Notes title"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Note title"
         android:paddingStart="8dp"
         android:singleLine="true"
         android:textColor="#E4FFFFFF"
         android:textColorHint="#C3FFFFFF"
-        android:background="@drawable/edittext_background"
         android:textSize="42sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_cancel" />
 
 
     <EditText
@@ -66,13 +66,13 @@
         android:layout_height="350dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Notes description"
-        android:layout_marginTop="30dp"
-        android:paddingStart="8dp"
+        android:layout_marginTop="42dp"
         android:background="@drawable/edittext_background"
         android:gravity="top"
+        android:hint="Note description"
         android:inputType="textMultiLine"
         android:lines="20"
+        android:paddingStart="8dp"
         android:singleLine="false"
         android:textColor="#E4FFFFFF"
         android:textColorHint="#C3FFFFFF"
