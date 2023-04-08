@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DA000000"
+    android:background="@drawable/notes_background"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.SearchView
@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="#242B2E"
+        android:background="@drawable/search_bar_background"
         app:queryHint="Search"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
