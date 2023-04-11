@@ -3,7 +3,8 @@ An Notes App(android application) which is used to maintain notes.
 User can create, update, delete, pin/unpin notes using the application.
 Local storage is used to keep the record.
 Modern android development has been used like ROOM databse.
-![pic_one](https://user-images.githubusercontent.com/60665514/231240314-e01b50c7-d8b1-4ef0-880e-aa2888de8cd3.png)
-![pic_two](https://user-images.githubusercontent.com/60665514/231240339-b2d777da-0469-4def-990c-d5596c9e9d20.png)
-![pic_three](https://user-images.githubusercontent.com/60665514/231240356-53a88cbb-9fe8-47ba-8569-9b19f823aab2.png)
-![pic_four](https://user-images.githubusercontent.com/60665514/231240364-77a1ece6-d9fe-4305-bfb9-50a6d4fb6fc9.png)
+![pic_one](https://user-images.githubusercontent.com/60665514/231240949-26ebf5ae-af86-4533-98ff-f28ec581350f.png)
+![pic_two](https://user-images.githubusercontent.com/60665514/231240976-ce1c93c0-8257-440d-9e70-62b9543023d7.png)
+![pic_three](https://user-images.githubusercontent.com/60665514/231240994-19a34abb-9e79-4317-8748-284be0ccb098.png)
+![pic_four](https://user-images.githubusercontent.com/60665514/231241009-52006f25-afbf-4ade-9344-6954108c1601.png)
+
