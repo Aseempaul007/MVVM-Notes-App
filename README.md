@@ -4,9 +4,9 @@
 # Local storage is used to keep the record.
 # Modern android development has been used like ROOM databse.
 
-![pic_one](https://user-images.githubusercontent.com/60665514/231241577-2fe61260-8279-49ca-93a1-25b5ce9e6aae.png)
+![pic_one](https://user-images.githubusercontent.com/60665514/231241577-2fe61260-8279-49ca-93a1-25b5ce9e6aae.png)  ![pic_two](https://user-images.githubusercontent.com/60665514/231240976-ce1c93c0-8257-440d-9e70-62b9543023d7.png)
 
-![pic_two](https://user-images.githubusercontent.com/60665514/231240976-ce1c93c0-8257-440d-9e70-62b9543023d7.png)
+
 
 ![pic_three](https://user-images.githubusercontent.com/60665514/231240994-19a34abb-9e79-4317-8748-284be0ccb098.png)
 
