@@ -21,6 +21,7 @@ import com.example.notes.Adapters.NotesViewHolder;
 import com.example.notes.Database.MainDao;
 import com.example.notes.Database.RoomDB;
 import com.example.notes.Models.Notes;
+import com.example.notes.databinding.ActivityMainBinding;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -29,24 +30,19 @@ import java.util.List;
 
  public class MainActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
+     ActivityMainBinding mainXml;
     NotesViewHolder notesListAdapter;
     RoomDB database;
     List<Notes> notesList = new ArrayList<Notes>();
-     ExtendedFloatingActionButton fab;
 
-    SearchView searchView;
 
     Notes selectedNote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        recyclerView = findViewById(R.id.recycler_home);
-        fab = findViewById(R.id.fab_add);
-        searchView = findViewById(R.id.searchView);
+        mainXml = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(mainXml.getRoot());
 
         database = RoomDB.getInstance(this);
 
@@ -54,7 +50,7 @@ import java.util.List;
 
         updateRecycler(notesList);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        mainXml.fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i =new Intent(MainActivity.this,NotesTakerActivity.class);
@@ -62,7 +58,7 @@ import java.util.List;
             }
         });
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        mainXml.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 return false;
@@ -115,10 +111,10 @@ import java.util.List;
 
      private void updateRecycler(List<Notes> notes) {
 
-        recyclerView.hasFixedSize();
+        mainXml.recyclerHome.hasFixedSize();
         notesListAdapter = new NotesViewHolder(notes,MainActivity.this,notesClickListner);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
-        recyclerView.setAdapter(notesListAdapter);
+         mainXml.recyclerHome.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
+         mainXml.recyclerHome.setAdapter(notesListAdapter);
      }
 
      private final NotesClick notesClickListner= new NotesClick() {

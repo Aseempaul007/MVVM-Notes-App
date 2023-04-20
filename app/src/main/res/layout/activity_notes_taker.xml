@@ -63,7 +63,7 @@
     <EditText
         android:id="@+id/editText_notes"
         android:layout_width="0dp"
-        android:layout_height="350dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="42dp"

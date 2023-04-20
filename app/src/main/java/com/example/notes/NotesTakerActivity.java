@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.notes.Database.RoomDB;
 import com.example.notes.Models.Notes;
+import com.example.notes.databinding.ActivityNotesTakerBinding;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import java.text.SimpleDateFormat;
@@ -20,46 +21,38 @@ import java.util.Date;
 
 public class NotesTakerActivity extends AppCompatActivity {
 
-    EditText editText_notes,editText_title;
-    ExtendedFloatingActionButton imageView_save;
+    ActivityNotesTakerBinding notesBinding;
 
     Notes note;
 
     boolean isOldNote = false;
 
-    ExtendedFloatingActionButton discardButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notes_taker);
-
-        editText_notes = findViewById(R.id.editText_notes);
-        editText_title = findViewById(R.id.editText_title);
-        imageView_save = findViewById(R.id.imageView_save);
-        discardButton = findViewById(R.id.imageView_cancel);
-
+        notesBinding = ActivityNotesTakerBinding.inflate(getLayoutInflater());
+        setContentView(notesBinding.getRoot());
 
         note = new Notes();
         try {
         note = (Notes)getIntent().getSerializableExtra("old_data");
-        editText_title.setText(note.getTitle());
-        editText_notes.setText(note.getDescription());
+        notesBinding.editTextTitle.setText(note.getTitle());
+        notesBinding.editTextNotes.setText(note.getDescription());
 
         isOldNote = true;
         }catch (Exception e){
             e.printStackTrace();
         }
 
-        imageView_save.setOnClickListener(new View.OnClickListener() {
+        notesBinding.imageViewSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if(!isOldNote){
                     note = new Notes();
                 }
-                String title = editText_title.getText().toString();
-                String description = editText_notes.getText().toString();
+                String title = notesBinding.editTextTitle.getText().toString();
+                String description = notesBinding.editTextNotes.getText().toString();
                 String creDate;
 
                 if(description.isEmpty() || title.isEmpty()){
@@ -88,7 +81,7 @@ public class NotesTakerActivity extends AppCompatActivity {
             }
         });
 
-        discardButton.setOnClickListener(new View.OnClickListener() {
+        notesBinding.imageViewCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(NotesTakerActivity.this,MainActivity.class);
